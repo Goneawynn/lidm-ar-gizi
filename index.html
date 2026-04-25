@@ -1,14 +1,195 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>qr-ar-lidm</title>
-  </head>
-  <body>
-    <h1>haii</h1>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AR Gizi – LIDM UNJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <!-- ▒▒ LOADER ▒▒ -->
+  <div id="loader" role="status" aria-label="Memuat…">
+    <div class="loader-logo">LOGO</div>
+    <p class="loader-text">AR Gizi</p>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ▒▒ NAVBAR ▒▒ -->
+  <nav id="navbar" aria-label="Navigasi utama">
+    <div class="nav-logo">
+      <div class="nav-logo-circle">LOGO</div>
+      <span class="nav-logo-text">AR Gizi</span>
+    </div>
+    <span class="nav-badge">LIDM UNJ</span>
+  </nav>
+
+  <!-- ▒▒ HERO ▒▒ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg" role="img" aria-label="Foto buah dan sayuran segar"></div>
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-blob blob3"></div>
+
+    <div class="hero-logo-ring" aria-label="Logo LIDM UNJ">
+      <span>LIDM</span>
+      <span>UNJ</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">✨ Augmented Reality</div>
+      <h1 class="hero-title">LIDM UNJ<br><span>AR Gizi</span></h1>
+      <p class="hero-subtitle">Belajar Gizi Jadi Lebih Seru &amp; Nyata</p>
+    </div>
+
+    <div class="scroll-indicator" onclick="document.getElementById('welcome').scrollIntoView({behavior:'smooth'})" role="button" tabindex="0" aria-label="Scroll ke bawah">
+      <div class="scroll-mouse" aria-hidden="true"></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- wave divider -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 375 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 56 L0 28 Q94 0 188 14 Q282 28 375 8 L375 56 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- ▒▒ WELCOME ▒▒ -->
+  <section id="welcome">
+    <div class="welcome-pill">
+      <span class="dot"></span>
+      Platform Edukasi
+    </div>
+    <h2 class="welcome-title">Selamat<br><em>Datang!</em></h2>
+    <p class="welcome-desc">
+      Jelajahi isi piringmu dengan teknologi <strong>Augmented Reality</strong>. 
+      Pelajari nutrisi seimbang dan jadikan gaya hidup sehat lebih mudah dijangkau!
+    </p>
+    <div class="btn-wrap">
+      <button class="btn-cta" onclick="alert('Fitur AR Scanner segera hadir!')" aria-label="Scan makanan sekarang">
+        <span class="cam-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+        </span>
+        Scan Sekarang
+      </button>
+    </div>
+  </section>
+
+  <!-- ▒▒ FEATURES ▒▒ -->
+  <section id="features">
+    <p class="section-label">Fitur Utama</p>
+    <h2 class="section-title">Apa yang Bisa<br>Kamu Lakukan?</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-card" data-delay="0">
+        <div class="feature-icon fi-1">🥦</div>
+        <div>
+          <p class="feature-num">Fitur 01</p>
+          <h3 class="feature-name">Scan Makanan</h3>
+          <p class="feature-desc">Arahkan kamera ke buah atau sayuran, dan teknologi AR akan langsung mengenalinya secara real-time.</p>
+        </div>
+      </div>
+
+      <div class="feature-card" data-delay="100">
+        <div class="feature-icon fi-2">📊</div>
+        <div>
+          <p class="feature-num">Fitur 02</p>
+          <h3 class="feature-name">Info Gizi Lengkap</h3>
+          <p class="feature-desc">Dapatkan informasi kandungan gizi secara visual — kalori, vitamin, mineral, dan manfaat kesehatan.</p>
+        </div>
+      </div>
+
+      <div class="feature-card" data-delay="200">
+        <div class="feature-icon fi-3">🎮</div>
+        <div>
+          <p class="feature-num">Fitur 03</p>
+          <h3 class="feature-name">Belajar Interaktif</h3>
+          <p class="feature-desc">Nikmati pengalaman belajar yang menyenangkan melalui animasi AR dan quiz interaktif langsung di layar.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ▒▒ HOW IT WORKS ▒▒ -->
+  <section id="howitworks">
+    <p class="section-label">Cara Kerja</p>
+    <h2 class="section-title">Mudah &amp; Cepat<br>dalam 3 Langkah</h2>
+
+    <div class="steps">
+      <div class="step" data-delay="0">
+        <div class="step-line">
+          <div class="step-dot">1</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="step-title">Buka Kamera AR</h3>
+          <p class="step-desc">Ketuk tombol "Scan Sekarang" dan izinkan akses kamera perangkatmu.</p>
+        </div>
+      </div>
+
+      <div class="step" data-delay="120">
+        <div class="step-line">
+          <div class="step-dot">2</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="step-title">Arahkan ke Makanan</h3>
+          <p class="step-desc">Posisikan kamera di atas buah atau sayuran. AI kami akan mendeteksinya otomatis.</p>
+        </div>
+      </div>
+
+      <div class="step" data-delay="240">
+        <div class="step-line">
+          <div class="step-dot">3</div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-body">
+          <h3 class="step-title">Lihat Informasi Gizi</h3>
+          <p class="step-desc">Informasi gizi lengkap muncul secara visual di layar — interaktif dan mudah dipahami!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ▒▒ FOOTER CTA ▒▒ -->
+  <section id="footer-cta">
+    <span class="footer-emoji">🥗</span>
+    <h2 class="footer-title">Siap Belajar<br>Gizi Bareng?</h2>
+    <p class="footer-sub">Mulai perjalanan hidup sehatmu sekarang.<br>Gratis untuk semua siswa SD!</p>
+    <div class="btn-wrap">
+      <button class="btn-cta" onclick="alert('Fitur AR Scanner segera hadir!')">
+        <span class="cam-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+        </span>
+        Mulai Scan AR
+      </button>
+    </div>
+    <div class="footer-note">
+      <strong>LIDM UNJ – AR Gizi</strong> &copy; 2025<br>
+      Laboratorium Inovasi Digital &amp; Media · Universitas Negeri Jakarta<br>
+      <small>Dikembangkan untuk edukasi gizi anak usia sekolah dasar</small>
+    </div>
+  </section>
+
+  <!-- ▒▒ FLOATING ACTION BUTTON ▒▒ -->
+  <a href="#welcome" id="fab" aria-label="Scan sekarang">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+      <circle cx="12" cy="13" r="4"/>
+    </svg>
+  </a>
+
+  <script src="./src/main.js" defer></script>
+</body>
 </html>
