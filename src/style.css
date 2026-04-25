@@ -391,6 +391,7 @@
       border: 2px solid var(--green-mid);
       opacity: 0;
       animation: ripple 2.4s ease-out infinite;
+      pointer-events: none;
     }
     .btn-wrap::after { animation-delay: 1.2s; }
     @keyframes ripple {
