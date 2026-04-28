@@ -1,0 +1,35 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/ARstyle.css">
+</head>
+<body>
+    <!-- Loading sat aplikasi pertama kali dibuka -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Memulai AR...</p>
+    </div>
+
+    <!-- Video kamera sebagai background -->
+    <video id="bg-video" autoplay muted playinline></video>
+
+    <!-- Tempat Three.js menggambar 3D -->
+    <div id="ar-container"></div>
+
+    <!-- Tampilan UI di atas AR -->
+    <div id="ui-overlay"></div>
+
+    <!-- Bar status di bagian atas -->
+    <div id="status-bar">Arahkan ke QR Code</div>
+    
+    <!-- Info QR yang terdeteksi (awalnya tersembunyi) -->
+    <div id="qr-info" class="hidden">
+        <span id="qr-label">Object AR</span>
+        <button id="btn-reset">✕ Reset</button>
+    </div>
+    
+    <script type="module" src="/src/ARLoad.js" defer></script>
+</body>
+</html>

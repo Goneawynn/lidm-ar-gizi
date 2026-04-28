@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ar-js-org/ar.js": "^3.4.8",
+    "jsqr": "^1.4.0",
     "qrjs": "^0.2.0",
     "three": "^0.184.0"
   }
